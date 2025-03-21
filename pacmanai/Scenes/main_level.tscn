@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://bqmtvag75qhdu"]
 
+[ext_resource type="Texture2D" uid="uid://cdgj6yaimvvmt" path="res://Assets/Sprites/PacManBoard.png" id="1_ikcpc"]
 [ext_resource type="PackedScene" uid="uid://d4hwb8a1anyf5" path="res://Scenes/wall.tscn" id="2_5erdv"]
-[ext_resource type="Texture2D" uid="uid://cdgj6yaimvvmt" path="res://Assets/Sprites/PacManBoard.png" id="2_ikcpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbrl8"]
 size = Vector2(1120, 20)
@@ -58,7 +58,7 @@ size = Vector2(360, 40)
 [node name="PacManBoard" type="Sprite2D" parent="."]
 position = Vector2(1.42109e-14, 23)
 scale = Vector2(5, 5)
-texture = ExtResource("2_ikcpc")
+texture = ExtResource("1_ikcpc")
 
 [node name="Walls" type="Node2D" parent="."]
 position = Vector2(0, 23)
