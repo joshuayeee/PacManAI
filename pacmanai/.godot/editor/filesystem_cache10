@@ -1,0 +1,22 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1742593574
+icon.svg::CompressedTexture2D::331647886114604484::1742587951::1742587956::1::::<><><>0<>0<>42c713e8349fe31edec735a2493c71dd<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://addons/::1742593574
+::res://addons/py4godot/::1742593775
+plugin.cfg::TextFile::-1::1742593656::0::1::::<><><>0<>0<><>::
+python.gdextension::GDExtension::4276918980259607627::1742593574::0::1::::<><><>0<>0<><>::
+Python.svg::CompressedTexture2D::2101989776750143886::1742593656::1742593776::1::::<><><>0<>0<>3c41c3362ca14570114028cbe3fa106c<>res://.godot/imported/Python.svg-681cb785c113434a7384dcc1fd345d19.ctex::
+::res://Assets/::1742588105
+::res://Assets/Fonts/::1742588105
+::res://Assets/Music/::1742588090
+::res://Assets/Sounds/::1742588084
+::res://Assets/Sprites/::1742590239
+Arcade - Pac-Man - General Sprites.png::CompressedTexture2D::225629537535560838::1741983374::1742588069::1::::<><><>0<>0<>923ef40a1b0e10301826ef519d8ecceb<>res://.godot/imported/Arcade - Pac-Man - General Sprites.png-1ab1e9f599907ad6b1d8333453df1eb3.ctex::
+Arcade - Pac-Man - Maze Parts.png::CompressedTexture2D::4228648580433454345::1741983066::1742588069::1::::<><><>0<>0<>1c579f10acf0823b5e23b3ab6df4e5f3<>res://.godot/imported/Arcade - Pac-Man - Maze Parts.png-1ceab3c8fb717a4dbb5692232ea32912.ctex::
+Pac-man.png::CompressedTexture2D::3128827522315787344::1742589673::1742589673::1::::<><><>0<>0<>719c43ee2c3c2dbc4c1b82e0cc6f462e<>res://.godot/imported/Pac-man.png-6acd0876715ee0a47507d6af80d17a2d.ctex::
+PacManBoard.png::CompressedTexture2D::4996397238311380839::1742590239::1742590239::1::::<><><>0<>0<>e8054154a2de5ef74805d99ad01c81d4<>res://.godot/imported/PacManBoard.png-e20fec43288ba0e1182201e5dd29baeb.ctex::
+PacManWall.png::CompressedTexture2D::8583817967953649782::1742589503::1742589503::1::::<><><>0<>0<>367380a329e585170f08721287db85a3<>res://.godot/imported/PacManWall.png-f932a263077c12da427a8efcb6ebdc87.ctex::
+::res://Scenes/::1742593164
+main_level.tscn::PackedScene::3535405850248389366::1742593164::0::1::::<><><>0<>0<><>::uid://d4hwb8a1anyf5::::res://Scenes/wall.tscn<>uid://cdgj6yaimvvmt::::res://Assets/Sprites/PacManBoard.png
+wall.tscn::PackedScene::9210528454947842512::1742590606::0::1::::<><><>0<>0<><>::
+::res://Scripts/::1742588096
