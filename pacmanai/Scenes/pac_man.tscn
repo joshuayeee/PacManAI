@@ -38,16 +38,17 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2mw3d"]
-radius = 6.0
+radius = 20.0
 
 [node name="PacMan" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_nhr0u")
 autoplay = "default"
 frame = 3
 frame_progress = 0.43638
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(-1, -2)
 shape = SubResource("CircleShape2D_2mw3d")
