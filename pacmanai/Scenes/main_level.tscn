@@ -379,7 +379,7 @@ position = Vector2(139, 2)
 shape = SubResource("RectangleShape2D_vgie2")
 
 [node name="PacMan" parent="." instance=ExtResource("3_5erdv")]
-position = Vector2(0, 345)
+position = Vector2(0, 344)
 
 [node name="TurnPoints" type="Node2D" parent="."]
 
@@ -429,7 +429,7 @@ left_way = true
 up_way = true
 
 [node name="TurnPoint9" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
-position = Vector2(496, 224)
+position = Vector2(496, 216)
 left_way = true
 down_way = true
 
