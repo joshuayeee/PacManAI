@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dd876dkpfmyxh"]
+[gd_scene load_steps=9 format=3 uid="uid://dd876dkpfmyxh"]
 
 [ext_resource type="Texture2D" uid="uid://ctvwkajsqa367" path="res://Assets/Sprites/PacManChars.png" id="1_2mw3d"]
+[ext_resource type="Script" uid="uid://bsm5ngp60ls5x" path="res://Scripts/pac_man.gd" id="1_c67fa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c67fa"]
 atlas = ExtResource("1_2mw3d")
@@ -40,7 +41,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_2mw3d"]
 radius = 20.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_c67fa"]
+radius = 20.0
+
 [node name="PacMan" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_c67fa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
@@ -52,3 +58,13 @@ frame_progress = 0.43638
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -2)
 shape = SubResource("CircleShape2D_2mw3d")
+
+[node name="TurnPointCheck" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TurnPointCheck"]
+position = Vector2(-1, -2)
+shape = SubResource("CircleShape2D_c67fa")
+
+[connection signal="body_entered" from="TurnPointCheck" to="." method="_on_turn_point_check_body_entered"]
+[connection signal="body_exited" from="TurnPointCheck" to="." method="_on_turn_point_check_body_exited"]
