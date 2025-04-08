@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bteglvdokwov4"]
+
+[ext_resource type="Script" uid="uid://carcvah5ykvmd" path="res://Scripts/turn_point.gd" id="1_sbyfd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sbyfd"]
+
+[node name="TurnPoint" type="Node2D"]
+script = ExtResource("1_sbyfd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_sbyfd")

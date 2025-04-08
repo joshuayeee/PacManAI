@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://dd876dkpfmyxh"]
+
+[ext_resource type="Texture2D" uid="uid://ctvwkajsqa367" path="res://Assets/Sprites/PacManChars.png" id="1_2mw3d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c67fa"]
+atlas = ExtResource("1_2mw3d")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouydr"]
+atlas = ExtResource("1_2mw3d")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il411"]
+atlas = ExtResource("1_2mw3d")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nhr0u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c67fa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouydr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il411")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouydr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c67fa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2mw3d"]
+radius = 20.0
+
+[node name="PacMan" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_nhr0u")
+autoplay = "default"
+frame = 3
+frame_progress = 0.43638
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("CircleShape2D_2mw3d")

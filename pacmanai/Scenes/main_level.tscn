@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://bqmtvag75qhdu"]
+[gd_scene load_steps=21 format=3 uid="uid://bqmtvag75qhdu"]
 
 [ext_resource type="Texture2D" uid="uid://cdgj6yaimvvmt" path="res://Assets/Sprites/PacManBoard.png" id="1_ikcpc"]
 [ext_resource type="PackedScene" uid="uid://d4hwb8a1anyf5" path="res://Scenes/wall.tscn" id="2_5erdv"]
+[ext_resource type="PackedScene" uid="uid://dd876dkpfmyxh" path="res://Scenes/pac_man.tscn" id="3_5erdv"]
+[ext_resource type="PackedScene" uid="uid://bteglvdokwov4" path="res://Scenes/turn_point.tscn" id="4_qbrl8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbrl8"]
 size = Vector2(1120, 20)
@@ -375,3 +377,368 @@ position = Vector2(141, 498)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall45"]
 position = Vector2(139, 2)
 shape = SubResource("RectangleShape2D_vgie2")
+
+[node name="PacMan" parent="." instance=ExtResource("3_5erdv")]
+position = Vector2(0, 345)
+
+[node name="TurnPoints" type="Node2D" parent="."]
+
+[node name="TurnPoint" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-304, 344)
+right_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint2" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-176, 344)
+right_way = true
+left_way = true
+down_way = true
+
+[node name="TurnPoint3" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(176, 344)
+right_way = true
+left_way = true
+down_way = true
+
+[node name="TurnPoint4" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(296, 344)
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint5" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(296, 464)
+right_way = true
+up_way = true
+
+[node name="TurnPoint6" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(416, 464)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint7" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(496, 464)
+left_way = true
+down_way = true
+
+[node name="TurnPoint8" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(496, 344)
+left_way = true
+up_way = true
+
+[node name="TurnPoint9" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(496, 224)
+left_way = true
+down_way = true
+
+[node name="TurnPoint10" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(296, 216)
+right_way = true
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint11" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(184, 216)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint12" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(64, 216)
+right_way = true
+down_way = true
+
+[node name="TurnPoint13" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(64, 344)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint14" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-64, 344)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint15" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-64, 216)
+left_way = true
+down_way = true
+
+[node name="TurnPoint16" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-184, 216)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint17" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-304, 216)
+right_way = true
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint18" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-504, 216)
+right_way = true
+down_way = true
+
+[node name="TurnPoint19" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-504, 344)
+right_way = true
+up_way = true
+
+[node name="TurnPoint20" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-416, 344)
+left_way = true
+down_way = true
+
+[node name="TurnPoint21" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-416, 464)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint22" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-304, 464)
+left_way = true
+up_way = true
+
+[node name="TurnPoint23" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-504, 464)
+right_way = true
+down_way = true
+
+[node name="TurnPoint24" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-504, 576)
+right_way = true
+up_way = true
+
+[node name="TurnPoint25" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-64, 576)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint26" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-64, 464)
+left_way = true
+down_way = true
+
+[node name="TurnPoint27" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-176, 464)
+right_way = true
+up_way = true
+
+[node name="TurnPoint28" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(64, 464)
+right_way = true
+down_way = true
+
+[node name="TurnPoint29" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(176, 464)
+left_way = true
+up_way = true
+
+[node name="TurnPoint30" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(64, 576)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint31" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(496, 576)
+left_way = true
+up_way = true
+
+[node name="TurnPoint32" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(416, 344)
+right_way = true
+down_way = true
+
+[node name="TurnPoint33" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(296, -16)
+right_way = true
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint34" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-304, -16)
+right_way = true
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint35" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-184, 104)
+right_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint36" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(184, 104)
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint37" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(184, -136)
+left_way = true
+down_way = true
+
+[node name="TurnPoint38" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-184, -136)
+right_way = true
+down_way = true
+
+[node name="TurnPoint39" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-64, -136)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint40" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(64, -136)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint41" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(64, -256)
+right_way = true
+down_way = true
+
+[node name="TurnPoint42" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(176, -256)
+left_way = true
+up_way = true
+
+[node name="TurnPoint43" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-64, -256)
+left_way = true
+down_way = true
+
+[node name="TurnPoint44" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-176, -256)
+right_way = true
+up_way = true
+
+[node name="TurnPoint45" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-304, -256)
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint46" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-504, -256)
+right_way = true
+up_way = true
+
+[node name="TurnPoint47" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-504, -376)
+right_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint48" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-504, -536)
+right_way = true
+down_way = true
+
+[node name="TurnPoint49" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-304, -536)
+right_way = true
+left_way = true
+down_way = true
+
+[node name="TurnPoint50" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-304, -376)
+right_way = true
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint51" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-176, -376)
+right_way = true
+left_way = true
+down_way = true
+
+[node name="TurnPoint52" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-64, -376)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint53" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-64, -536)
+left_way = true
+down_way = true
+
+[node name="TurnPoint54" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(64, -536)
+right_way = true
+down_way = true
+
+[node name="TurnPoint55" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(64, -376)
+right_way = true
+left_way = true
+up_way = true
+
+[node name="TurnPoint56" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(176, -376)
+right_way = true
+left_way = true
+down_way = true
+
+[node name="TurnPoint57" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(296, -376)
+right_way = true
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint58" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(504, -376)
+left_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint59" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(504, -536)
+left_way = true
+down_way = true
+
+[node name="TurnPoint60" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(296, -536)
+right_way = true
+left_way = true
+down_way = true
+
+[node name="TurnPoint61" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(504, -256)
+left_way = true
+up_way = true
+
+[node name="TurnPoint62" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(296, -256)
+right_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint63" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(184, -16)
+right_way = true
+up_way = true
+down_way = true
+
+[node name="TurnPoint64" parent="TurnPoints" instance=ExtResource("4_qbrl8")]
+position = Vector2(-184, -16)
+left_way = true
+up_way = true
+down_way = true
