@@ -1,4 +1,4 @@
-extends Node2D
+extends StaticBody2D
 
 @export var right_way = false
 @export var left_way = false

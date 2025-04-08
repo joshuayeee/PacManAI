@@ -3,11 +3,12 @@
 [ext_resource type="Script" uid="uid://carcvah5ykvmd" path="res://Scripts/turn_point.gd" id="1_sbyfd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sbyfd"]
+radius = 2.0
 
-[node name="TurnPoint" type="Node2D"]
+[node name="TurnPoint" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_sbyfd")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_sbyfd")
