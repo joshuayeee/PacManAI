@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7e0lqu1rdyrr"]
+
+[ext_resource type="Texture2D" uid="uid://c4d74lu2bsy5d" path="res://Assets/Sprites/SuperPacDot.png" id="1_l1tyy"]
+[ext_resource type="Script" uid="uid://dh5fmu7wq8hii" path="res://Scripts/super_pac_dot.gd" id="1_l04bl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l04bl"]
+radius = 16.0
+
+[node name="SuperPacDot" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_l04bl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_l1tyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_l04bl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

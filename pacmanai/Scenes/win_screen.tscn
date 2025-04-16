@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3rbiuen2ehog"]
+
+[ext_resource type="Script" uid="uid://t7p3ej046ksd" path="res://Scripts/win_screen.gd" id="1_l5sol"]
+
+[node name="WinScreen" type="Node2D"]
+script = ExtResource("1_l5sol")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -263.0
+offset_top = 300.0
+offset_right = 263.0
+offset_bottom = 437.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "YOU WIN :)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -38.5
+offset_right = 152.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Back to Title"
+
+[connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_pressed"]

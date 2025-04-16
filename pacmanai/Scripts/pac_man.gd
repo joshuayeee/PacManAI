@@ -1,5 +1,5 @@
 #Author: Joshua Yee
-#Date Last Edited: April 7, 2025
+#Date Last Edited: April 15, 2025
 #Purpose: Defines Pac-Man's controls
 
 #gets methods and vars from CharacterBody2D
@@ -11,7 +11,7 @@ const SPEED = 300.0
 const FLIP_POINT = 592
 
 #reference to the animated sprite that represents pac-man graphically
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 #determines if pac-man can go right
 var right_way = false
@@ -34,8 +34,14 @@ var is_hori = true
 #holds the current turn point that pac-man is on
 var curr_point = null
 
+#check if pac-man is in its super mode
+var is_super = false
+
+#the timer that determines how long super mode lasts for
+@onready var super_timer = $SuperTimer
+
 #function that runs every frame (optimized for physics)
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta):
 	#checks if pac-man is moving along the horizontal axis or not
 	if (is_hori):
 		#SIDENOTE: GO TO PROJECT > PROJECT SETTINGS > INPUT MAP TO LOOK AT THE ACTIONS THE USER CAN USE
@@ -119,6 +125,13 @@ func _physics_process(delta: float) -> void:
 			#set is hori to true
 			is_hori = true
 	
+	#check if pac-man is in its super mode
+	#also check if the super timer hasn't started already
+	if (is_super and super_timer.is_stopped()):
+		#start the super timer
+		super_timer.start()
+		print("super")
+	
 	#check if pac-man can move
 	if (can_move):
 		#check if pac-man's current direction is right
@@ -198,7 +211,7 @@ func update_animation():
 		animated_sprite_2d.play("down_move")
 
 #checks if pac-man is at a turn point (var body is the turn point)
-func _on_turn_point_check_body_entered(body: Node2D) -> void:
+func _on_turn_point_check_body_entered(body):
 	#set the current turn point to be the turn point pac-man is currently on
 	curr_point = body
 	
@@ -222,7 +235,7 @@ func _on_turn_point_check_body_entered(body: Node2D) -> void:
 			adjust_position()
 
 #checks if pac-man left a turn point (var body is the turn point)
-func _on_turn_point_check_body_exited(body: Node2D) -> void:
+func _on_turn_point_check_body_exited(_body):
 	#pac-man is no longer on a turn point
 	#set current turn point to null
 	curr_point = null
@@ -238,3 +251,8 @@ func _on_turn_point_check_body_exited(body: Node2D) -> void:
 	#since pac-man is not at a turn point, it's not at a dead end
 	#thus it can move
 	can_move = true
+
+#signal that runs when the super timer runs out of time
+func _on_super_timer_timeout():
+	is_super = false
+	print("not super")

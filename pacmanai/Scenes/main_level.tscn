@@ -1,9 +1,12 @@
-[gd_scene load_steps=21 format=3 uid="uid://bqmtvag75qhdu"]
+[gd_scene load_steps=24 format=3 uid="uid://bqmtvag75qhdu"]
 
+[ext_resource type="Script" uid="uid://hni4xvyegvax" path="res://Scripts/main_level.gd" id="1_ha3dl"]
 [ext_resource type="Texture2D" uid="uid://cdgj6yaimvvmt" path="res://Assets/Sprites/PacManBoard.png" id="1_ikcpc"]
 [ext_resource type="PackedScene" uid="uid://d4hwb8a1anyf5" path="res://Scenes/wall.tscn" id="2_5erdv"]
 [ext_resource type="PackedScene" uid="uid://dd876dkpfmyxh" path="res://Scenes/pac_man.tscn" id="3_5erdv"]
 [ext_resource type="PackedScene" uid="uid://bteglvdokwov4" path="res://Scenes/turn_point.tscn" id="4_qbrl8"]
+[ext_resource type="Texture2D" uid="uid://bktvlj8oha01i" path="res://Assets/Sprites/Pac-man.png" id="6_236hc"]
+[ext_resource type="PackedScene" uid="uid://brlf7xfihehm7" path="res://Scenes/dot_manager.tscn" id="6_lwkuy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbrl8"]
 size = Vector2(1120, 20)
@@ -54,6 +57,7 @@ size = Vector2(280, 20)
 size = Vector2(360, 40)
 
 [node name="MainLevel" type="Node2D"]
+script = ExtResource("1_ha3dl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -742,3 +746,9 @@ position = Vector2(-184, -16)
 left_way = true
 up_way = true
 down_way = true
+
+[node name="DotManager" parent="." instance=ExtResource("6_lwkuy")]
+
+[node name="Pac-man" type="Sprite2D" parent="."]
+position = Vector2(768, 240)
+texture = ExtResource("6_236hc")

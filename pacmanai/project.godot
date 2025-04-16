@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PacManAI"
-run/main_scene="uid://bqmtvag75qhdu"
+run/main_scene="uid://cbyfv0lcuotch"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -52,6 +52,7 @@ left={
 2d_physics/layer_1="PacMan"
 2d_physics/layer_2="Ghosts"
 2d_physics/layer_3="TurnPoints"
+2d_physics/layer_4="Dots"
 
 [rendering]
 

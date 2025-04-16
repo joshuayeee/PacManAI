@@ -161,5 +161,10 @@ collision_mask = 4
 position = Vector2(-1, -2)
 shape = SubResource("CircleShape2D_c67fa")
 
+[node name="SuperTimer" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+
 [connection signal="body_entered" from="TurnPointCheck" to="." method="_on_turn_point_check_body_entered"]
 [connection signal="body_exited" from="TurnPointCheck" to="." method="_on_turn_point_check_body_exited"]
+[connection signal="timeout" from="SuperTimer" to="." method="_on_super_timer_timeout"]

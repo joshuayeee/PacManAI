@@ -1,0 +1,554 @@
+[gd_scene load_steps=4 format=3 uid="uid://brlf7xfihehm7"]
+
+[ext_resource type="Script" uid="uid://qs3j1os41jxu" path="res://Scripts/dot_manager.gd" id="1_nh1pe"]
+[ext_resource type="PackedScene" uid="uid://dmct48sg5ovgf" path="res://Scenes/pac_dot.tscn" id="2_eavy2"]
+[ext_resource type="PackedScene" uid="uid://b7e0lqu1rdyrr" path="res://Scenes/super_pac_dot.tscn" id="3_7go27"]
+
+[node name="DotManager" type="Node2D"]
+script = ExtResource("1_nh1pe")
+
+[node name="PacDot" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, 344)
+
+[node name="PacDot2" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(240, 344)
+
+[node name="PacDot3" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(120, 344)
+
+[node name="PacDot4" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, 344)
+
+[node name="PacDot5" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(176, 344)
+
+[node name="PacDot24" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(176, 400)
+
+[node name="PacDot30" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(128, 464)
+
+[node name="PacDot67" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, 520)
+
+[node name="PacDot68" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(0, 576)
+
+[node name="PacDot69" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, 512)
+
+[node name="PacDot70" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-120, 464)
+
+[node name="PacDot71" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-176, 400)
+
+[node name="PacDot72" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-120, 344)
+
+[node name="PacDot73" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-240, 344)
+
+[node name="PacDot74" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, 400)
+
+[node name="PacDot75" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-360, 464)
+
+[node name="PacDot76" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-456, 464)
+
+[node name="PacDot77" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-416, 400)
+
+[node name="PacDot78" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, 280)
+
+[node name="PacDot79" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-392, 216)
+
+[node name="PacDot80" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, 272)
+
+[node name="PacDot81" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-248, 216)
+
+[node name="PacDot82" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-128, 216)
+
+[node name="PacDot83" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, 280)
+
+[node name="PacDot84" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, 280)
+
+[node name="PacDot85" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(128, 216)
+
+[node name="PacDot86" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(240, 216)
+
+[node name="PacDot87" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, 272)
+
+[node name="PacDot88" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(384, 216)
+
+[node name="PacDot89" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(496, 272)
+
+[node name="PacDot90" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(448, 344)
+
+[node name="PacDot91" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(416, 400)
+
+[node name="PacDot92" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, 400)
+
+[node name="PacDot93" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(352, 464)
+
+[node name="PacDot94" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(456, 464)
+
+[node name="PacDot95" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(496, 520)
+
+[node name="PacDot96" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-456, 344)
+
+[node name="PacDot97" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, 512)
+
+[node name="PacDot98" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, 96)
+
+[node name="PacDot99" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -152)
+
+[node name="PacDot100" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-408, -256)
+
+[node name="PacDot101" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, -312)
+
+[node name="PacDot102" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-408, -376)
+
+[node name="PacDot103" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-408, -536)
+
+[node name="PacDot104" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-176, -536)
+
+[node name="PacDot105" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -456)
+
+[node name="PacDot106" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, -456)
+
+[node name="PacDot107" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, -456)
+
+[node name="PacDot108" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -456)
+
+[node name="PacDot109" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(176, -536)
+
+[node name="PacDot110" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(400, -536)
+
+[node name="PacDot111" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(400, -376)
+
+[node name="PacDot112" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(400, -256)
+
+[node name="PacDot113" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -144)
+
+[node name="PacDot114" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, 96)
+
+[node name="PacDot115" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, 152)
+
+[node name="PacDot116" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, 40)
+
+[node name="PacDot129" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(504, -288)
+
+[node name="PacDot202" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(504, -352)
+
+[node name="PacDot203" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(504, -416)
+
+[node name="PacDot204" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(504, -496)
+
+[node name="PacDot133" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -80)
+
+[node name="PacDot134" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -200)
+
+[node name="PacDot135" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -320)
+
+[node name="PacDot136" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(504, -320)
+
+[node name="PacDot137" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(456, -256)
+
+[node name="PacDot138" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(352, -256)
+
+[node name="PacDot139" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(352, -376)
+
+[node name="PacDot140" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(456, -376)
+
+[node name="PacDot141" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(456, -536)
+
+[node name="PacDot142" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(352, -536)
+
+[node name="PacDot143" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(240, -536)
+
+[node name="PacDot144" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(128, -536)
+
+[node name="PacDot145" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, -496)
+
+[node name="PacDot146" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, -416)
+
+[node name="PacDot147" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(120, -376)
+
+[node name="PacDot148" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(240, -376)
+
+[node name="PacDot149" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -416)
+
+[node name="PacDot150" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -496)
+
+[node name="PacDot151" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(176, -320)
+
+[node name="PacDot152" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-176, -320)
+
+[node name="PacDot153" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-112, -376)
+
+[node name="PacDot154" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(0, -376)
+
+[node name="PacDot155" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-240, -376)
+
+[node name="PacDot156" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-352, -376)
+
+[node name="PacDot157" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-456, -376)
+
+[node name="PacDot158" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-456, -256)
+
+[node name="PacDot159" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-456, -536)
+
+[node name="PacDot160" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-352, -536)
+
+[node name="PacDot161" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-240, -536)
+
+[node name="PacDot162" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-120, -536)
+
+[node name="PacDot163" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, -496)
+
+[node name="PacDot164" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, -416)
+
+[node name="PacDot165" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -416)
+
+[node name="PacDot166" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -496)
+
+[node name="PacDot167" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -312)
+
+[node name="PacDot168" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -200)
+
+[node name="PacDot169" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -88)
+
+[node name="PacDot170" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-352, -256)
+
+[node name="PacDot171" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, 40)
+
+[node name="PacDot172" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, 144)
+
+[node name="PacDot175" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(120, -256)
+
+[node name="PacDot178" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-120, -256)
+
+[node name="PacDot179" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-440, 216)
+
+[node name="PacDot180" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-352, 216)
+
+[node name="PacDot181" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(336, 216)
+
+[node name="PacDot182" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(440, 216)
+
+[node name="PacDot183" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(440, 216)
+
+[node name="PacDot184" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(280, 576)
+
+[node name="PacDot185" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(392, 576)
+
+[node name="PacDot186" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(168, 576)
+
+[node name="PacDot187" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(120, 576)
+
+[node name="PacDot188" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(224, 576)
+
+[node name="PacDot189" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(336, 576)
+
+[node name="PacDot190" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(448, 576)
+
+[node name="PacDot191" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-272, 576)
+
+[node name="PacDot192" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-168, 576)
+
+[node name="PacDot193" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-384, 576)
+
+[node name="PacDot194" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-440, 576)
+
+[node name="PacDot195" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-320, 576)
+
+[node name="PacDot196" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-216, 576)
+
+[node name="PacDot197" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-112, 576)
+
+[node name="PacDot6" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, 464)
+
+[node name="PacDot7" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(176, 464)
+
+[node name="PacDot8" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, 464)
+
+[node name="PacDot9" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, 576)
+
+[node name="PacDot10" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, 576)
+
+[node name="PacDot11" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, 464)
+
+[node name="PacDot12" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-176, 464)
+
+[node name="PacDot13" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-176, 344)
+
+[node name="PacDot14" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, 344)
+
+[node name="PacDot15" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, 216)
+
+[node name="PacDot16" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-184, 216)
+
+[node name="PacDot17" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, 216)
+
+[node name="PacDot18" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, 344)
+
+[node name="PacDot19" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, 464)
+
+[node name="PacDot20" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-416, 464)
+
+[node name="PacDot21" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, 464)
+
+[node name="PacDot22" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, 576)
+
+[node name="PacDot23" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-416, 344)
+
+[node name="SuperPacDot" parent="." instance=ExtResource("3_7go27")]
+position = Vector2(-504, 344)
+
+[node name="SuperPacDot2" parent="." instance=ExtResource("3_7go27")]
+position = Vector2(496, 344)
+
+[node name="SuperPacDot3" parent="." instance=ExtResource("3_7go27")]
+position = Vector2(504, -456)
+
+[node name="SuperPacDot4" parent="." instance=ExtResource("3_7go27")]
+position = Vector2(-504, -456)
+
+[node name="PacDot25" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, 216)
+
+[node name="PacDot26" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, 216)
+
+[node name="PacDot27" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(184, 216)
+
+[node name="PacDot28" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, 216)
+
+[node name="PacDot29" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(496, 216)
+
+[node name="PacDot31" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(416, 344)
+
+[node name="PacDot32" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(416, 464)
+
+[node name="PacDot33" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(496, 464)
+
+[node name="PacDot34" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(496, 576)
+
+[node name="PacDot41" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, -416)
+
+[node name="PacDot198" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, -496)
+
+[node name="PacDot199" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, -344)
+
+[node name="PacDot200" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, -288)
+
+[node name="PacDot201" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, -288)
+
+[node name="PacDot43" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -16)
+
+[node name="PacDot44" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -16)
+
+[node name="PacDot45" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -256)
+
+[node name="PacDot46" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(504, -256)
+
+[node name="PacDot47" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(504, -376)
+
+[node name="PacDot48" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -376)
+
+[node name="PacDot49" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(504, -536)
+
+[node name="PacDot50" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(296, -536)
+
+[node name="PacDot51" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, -536)
+
+[node name="PacDot52" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, -376)
+
+[node name="PacDot53" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(176, -376)
+
+[node name="PacDot54" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(176, -256)
+
+[node name="PacDot55" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(64, -256)
+
+[node name="PacDot56" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, -256)
+
+[node name="PacDot57" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-176, -256)
+
+[node name="PacDot58" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-176, -376)
+
+[node name="PacDot59" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, -376)
+
+[node name="PacDot60" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-64, -536)
+
+[node name="PacDot61" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -536)
+
+[node name="PacDot62" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -376)
+
+[node name="PacDot63" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, -376)
+
+[node name="PacDot64" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, -536)
+
+[node name="PacDot65" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-504, -256)
+
+[node name="PacDot66" parent="." instance=ExtResource("2_eavy2")]
+position = Vector2(-304, -256)
