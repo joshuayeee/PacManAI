@@ -1,5 +1,5 @@
 #Author: Joshua Yee
-#Date Last Edited: April 15, 2025
+#Date Last Edited: April 16, 2025
 #Purpose: Defines Pac-Man's controls
 
 #gets methods and vars from CharacterBody2D
@@ -256,3 +256,9 @@ func _on_turn_point_check_body_exited(_body):
 func _on_super_timer_timeout():
 	is_super = false
 	print("not super")
+
+func _on_ghost_check_body_entered(body):
+	if (is_super):
+		body.kill()
+	else:
+		get_parent().load_lose()

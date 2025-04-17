@@ -10,3 +10,6 @@ func load_win():
 	#gets parent object (main)
 	#loads win screen scene
 	get_parent().load_scene("win_screen")
+
+func load_lose():
+	get_parent().load_scene("game_over_screen")
