@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="PacManAI"
+config/version="1.0"
 run/main_scene="uid://cbyfv0lcuotch"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
@@ -57,4 +58,5 @@ left={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
