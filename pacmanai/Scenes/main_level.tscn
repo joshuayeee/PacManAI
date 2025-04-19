@@ -1,60 +1,15 @@
-[gd_scene load_steps=24 format=3 uid="uid://bqmtvag75qhdu"]
+[gd_scene load_steps=11 format=3 uid="uid://bqmtvag75qhdu"]
 
 [ext_resource type="Script" uid="uid://hni4xvyegvax" path="res://Scripts/main_level.gd" id="1_ha3dl"]
 [ext_resource type="Texture2D" uid="uid://cdgj6yaimvvmt" path="res://Assets/Sprites/PacManBoard.png" id="1_ikcpc"]
-[ext_resource type="PackedScene" uid="uid://d4hwb8a1anyf5" path="res://Scenes/wall.tscn" id="2_5erdv"]
 [ext_resource type="PackedScene" uid="uid://dd876dkpfmyxh" path="res://Scenes/pac_man.tscn" id="3_5erdv"]
+[ext_resource type="PackedScene" uid="uid://bsvj83pkn8ooc" path="res://Scenes/clyde.tscn" id="3_tqiex"]
 [ext_resource type="PackedScene" uid="uid://bteglvdokwov4" path="res://Scenes/turn_point.tscn" id="4_qbrl8"]
 [ext_resource type="Texture2D" uid="uid://bktvlj8oha01i" path="res://Assets/Sprites/Pac-man.png" id="6_236hc"]
 [ext_resource type="PackedScene" uid="uid://brlf7xfihehm7" path="res://Scenes/dot_manager.tscn" id="6_lwkuy"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbrl8"]
-size = Vector2(1120, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2ia3"]
-size = Vector2(20, 400)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_236hc"]
-size = Vector2(20, 480)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikcpc"]
-size = Vector2(220, 160)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5erdv"]
-size = Vector2(120, 80)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwkuy"]
-size = Vector2(160, 80)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqiex"]
-size = Vector2(40, 180)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ha3dl"]
-size = Vector2(100, 40)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3gli"]
-size = Vector2(120, 40)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jcip"]
-size = Vector2(280, 40)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l6h0"]
-size = Vector2(40, 160)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o18aq"]
-size = Vector2(160, 40)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hd7sb"]
-size = Vector2(40, 280)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vthg"]
-size = Vector2(20, 160)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_unus1"]
-size = Vector2(280, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgie2"]
-size = Vector2(360, 40)
+[ext_resource type="PackedScene" uid="uid://blvn0370j1wce" path="res://Scenes/blinky.tscn" id="8_tqiex"]
+[ext_resource type="PackedScene" uid="uid://ckojpwe7t67as" path="res://Scenes/pinky.tscn" id="9_ha3dl"]
+[ext_resource type="PackedScene" uid="uid://b8msvqjxjih5m" path="res://Scenes/inky.tscn" id="10_f3gli"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_ha3dl")
@@ -65,322 +20,6 @@ script = ExtResource("1_ha3dl")
 position = Vector2(1.42109e-14, 23)
 scale = Vector2(5, 5)
 texture = ExtResource("1_ikcpc")
-
-[node name="Walls" type="Node2D" parent="."]
-position = Vector2(0, 23)
-
-[node name="Wall" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(0, 610)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall"]
-shape = SubResource("RectangleShape2D_qbrl8")
-
-[node name="Wall2" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(0, -610)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2"]
-shape = SubResource("RectangleShape2D_qbrl8")
-
-[node name="Wall3" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-551, -420)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall3"]
-position = Vector2(1, 0)
-shape = SubResource("RectangleShape2D_a2ia3")
-
-[node name="Wall4" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(549, -420)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall4"]
-position = Vector2(1, 0)
-shape = SubResource("RectangleShape2D_a2ia3")
-
-[node name="Wall5" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-551, 340)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall5"]
-position = Vector2(1, 40)
-shape = SubResource("RectangleShape2D_236hc")
-
-[node name="Wall6" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(549, 340)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall6"]
-position = Vector2(1, 40)
-shape = SubResource("RectangleShape2D_236hc")
-
-[node name="Wall7" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(550, 80)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall7"]
-position = Vector2(-100, 0)
-shape = SubResource("RectangleShape2D_ikcpc")
-
-[node name="Wall8" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(550, -160)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall8"]
-position = Vector2(-100, 0)
-shape = SubResource("RectangleShape2D_ikcpc")
-
-[node name="Wall9" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-350, -160)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall9"]
-position = Vector2(-100, 0)
-shape = SubResource("RectangleShape2D_ikcpc")
-
-[node name="Wall10" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-350, 10)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall10"]
-position = Vector2(-100, 70)
-shape = SubResource("RectangleShape2D_ikcpc")
-
-[node name="Wall11" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-401, -485)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall11"]
-position = Vector2(1, 5)
-shape = SubResource("RectangleShape2D_5erdv")
-
-[node name="Wall12" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(399, -485)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall12"]
-position = Vector2(1, 5)
-shape = SubResource("RectangleShape2D_5erdv")
-
-[node name="Wall13" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(158, -485)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall13"]
-position = Vector2(22, 5)
-shape = SubResource("RectangleShape2D_lwkuy")
-
-[node name="Wall14" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-202, -485)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall14"]
-position = Vector2(22, 5)
-shape = SubResource("RectangleShape2D_lwkuy")
-
-[node name="Wall15" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(0, -566)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall15"]
-position = Vector2(0, 36)
-shape = SubResource("RectangleShape2D_tqiex")
-
-[node name="Wall16" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-519, 378)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall16"]
-position = Vector2(9, 2)
-shape = SubResource("RectangleShape2D_ha3dl")
-
-[node name="Wall17" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(501, 378)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall17"]
-position = Vector2(9, 2)
-shape = SubResource("RectangleShape2D_ha3dl")
-
-[node name="Wall18" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(381, 258)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall18"]
-position = Vector2(19, 2)
-shape = SubResource("RectangleShape2D_f3gli")
-
-[node name="Wall19" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-419, 258)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall19"]
-position = Vector2(19, 2)
-shape = SubResource("RectangleShape2D_f3gli")
-
-[node name="Wall20" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-419, -342)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall20"]
-position = Vector2(19, 2)
-shape = SubResource("RectangleShape2D_f3gli")
-
-[node name="Wall21" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(381, -342)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall21"]
-position = Vector2(19, 2)
-shape = SubResource("RectangleShape2D_f3gli")
-
-[node name="Wall22" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-99, -342)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall22"]
-position = Vector2(99, 2)
-shape = SubResource("RectangleShape2D_2jcip")
-
-[node name="Wall23" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(1, -271)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall23"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_6l6h0")
-
-[node name="Wall24" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-99, 138)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall24"]
-position = Vector2(99, 2)
-shape = SubResource("RectangleShape2D_2jcip")
-
-[node name="Wall25" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(1, 209)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall25"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_6l6h0")
-
-[node name="Wall26" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-99, 378)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall26"]
-position = Vector2(99, 2)
-shape = SubResource("RectangleShape2D_2jcip")
-
-[node name="Wall27" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(1, 449)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall27"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_6l6h0")
-
-[node name="Wall28" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-239, 449)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall28"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_6l6h0")
-
-[node name="Wall29" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(241, 449)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall29"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_6l6h0")
-
-[node name="Wall30" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(241, 89)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall30"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_6l6h0")
-
-[node name="Wall31" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-239, 89)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall31"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_6l6h0")
-
-[node name="Wall32" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-359, 329)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall32"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_6l6h0")
-
-[node name="Wall33" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(361, 329)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall33"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_6l6h0")
-
-[node name="Wall34" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-208, 258)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall34"]
-position = Vector2(28, 2)
-shape = SubResource("RectangleShape2D_o18aq")
-
-[node name="Wall35" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(152, 258)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall35"]
-position = Vector2(28, 2)
-shape = SubResource("RectangleShape2D_o18aq")
-
-[node name="Wall36" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(152, -222)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall36"]
-position = Vector2(28, 2)
-shape = SubResource("RectangleShape2D_o18aq")
-
-[node name="Wall37" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-208, -222)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall37"]
-position = Vector2(28, 2)
-shape = SubResource("RectangleShape2D_o18aq")
-
-[node name="Wall38" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-241, -218)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall38"]
-position = Vector2(1, -2)
-shape = SubResource("RectangleShape2D_hd7sb")
-
-[node name="Wall39" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(239, -218)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall39"]
-position = Vector2(1, -2)
-shape = SubResource("RectangleShape2D_hd7sb")
-
-[node name="Wall40" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-125, -31)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall40"]
-position = Vector2(-5, -9)
-shape = SubResource("RectangleShape2D_5vthg")
-
-[node name="Wall41" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(135, -31)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall41"]
-position = Vector2(-5, -9)
-shape = SubResource("RectangleShape2D_5vthg")
-
-[node name="Wall42" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-99, -111)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall42"]
-position = Vector2(99, 1)
-shape = SubResource("RectangleShape2D_unus1")
-
-[node name="Wall43" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-99, 29)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall43"]
-position = Vector2(99, 1)
-shape = SubResource("RectangleShape2D_unus1")
-
-[node name="Wall44" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(-419, 498)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall44"]
-position = Vector2(139, 2)
-shape = SubResource("RectangleShape2D_vgie2")
-
-[node name="Wall45" parent="Walls" instance=ExtResource("2_5erdv")]
-position = Vector2(141, 498)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall45"]
-position = Vector2(139, 2)
-shape = SubResource("RectangleShape2D_vgie2")
 
 [node name="PacMan" parent="." instance=ExtResource("3_5erdv")]
 position = Vector2(0, 344)
@@ -752,3 +391,27 @@ down_way = true
 [node name="Pac-man" type="Sprite2D" parent="."]
 position = Vector2(768, 240)
 texture = ExtResource("6_236hc")
+
+[node name="Blinky" parent="." instance=ExtResource("8_tqiex")]
+position = Vector2(0, -136)
+
+[node name="Clyde" parent="." instance=ExtResource("3_tqiex")]
+position = Vector2(0, -136)
+
+[node name="Pinky" parent="." instance=ExtResource("9_ha3dl")]
+position = Vector2(0, -136)
+
+[node name="Inky" parent="." instance=ExtResource("10_f3gli")]
+position = Vector2(0, -136)
+
+[node name="BlinkyCorner" type="Node2D" parent="."]
+position = Vector2(504, -536)
+
+[node name="ClydeCorner" type="Node2D" parent="."]
+position = Vector2(-504, 576)
+
+[node name="PinkyCorner" type="Node2D" parent="."]
+position = Vector2(-504, -536)
+
+[node name="InkyCorner" type="Node2D" parent="."]
+position = Vector2(496, 576)

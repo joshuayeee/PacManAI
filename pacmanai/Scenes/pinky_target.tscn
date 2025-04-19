@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cljjxdx7ocpl4"]
+
+[ext_resource type="Script" uid="uid://31clw1r2obxu" path="res://Scripts/pinky_target.gd" id="1_juei6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5pkbm"]
+radius = 4.12311
+
+[node name="PinkyTarget" type="Node2D"]
+script = ExtResource("1_juei6")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5pkbm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
