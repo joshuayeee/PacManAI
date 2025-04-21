@@ -2,17 +2,18 @@
 
 [ext_resource type="Script" uid="uid://dr63kvoi738xt" path="res://Scripts/inky_target.gd" id="1_fc3mo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5pkbm"]
-radius = 4.12311
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc3mo"]
+size = Vector2(40.5, 40)
 
 [node name="InkyTarget" type="Node2D"]
 script = ExtResource("1_fc3mo")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 16
-collision_mask = 2
+collision_layer = 32
+collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_5pkbm")
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_fc3mo")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

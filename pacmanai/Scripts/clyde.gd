@@ -3,7 +3,7 @@
 #Purpose: Defines Clyde's AI behavior
 
 #defines the class name
-class_name Clyde
+class_name Old_Clyde
 
 #gets all the attributes of CharacterBody2D
 extends CharacterBody2D

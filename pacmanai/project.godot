@@ -54,6 +54,13 @@ left={
 2d_physics/layer_2="Ghosts"
 2d_physics/layer_3="TurnPoints"
 2d_physics/layer_4="Dots"
+2d_physics/layer_5="PinkyArea"
+2d_physics/layer_6="Target"
+2d_physics/layer_7="InkyArea"
+2d_physics/layer_8="Blinky"
+2d_physics/layer_9="Inky"
+2d_physics/layer_10="Pinky"
+2d_physics/layer_11="Clyde"
 
 [rendering]
 

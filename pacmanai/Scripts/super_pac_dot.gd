@@ -7,7 +7,9 @@ extends Area2D
 
 #signal that runs everytime pac-man collides with super pac dot
 func _on_body_entered(body):
-	#pac-man is now in its super mode
-	body.is_super = true
-	#remove self
-	queue_free()
+	if (visible):		
+		#pac-man is now in its super mode
+		body.is_super = true
+		#remove self
+		get_parent().my_dots -= 1
+		visible = false

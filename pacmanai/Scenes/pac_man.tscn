@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dd876dkpfmyxh"]
+[gd_scene load_steps=21 format=3 uid="uid://dd876dkpfmyxh"]
 
 [ext_resource type="Texture2D" uid="uid://ctvwkajsqa367" path="res://Assets/Sprites/PacManChars.png" id="1_2mw3d"]
 [ext_resource type="Script" uid="uid://bsm5ngp60ls5x" path="res://Scripts/pac_man.gd" id="1_c67fa"]
@@ -143,6 +143,12 @@ radius = 2.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ouydr"]
 radius = 20.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ouydr"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c67fa"]
+size = Vector2(40, 40)
+
 [node name="PacMan" type="CharacterBody2D"]
 collision_mask = 0
 script = ExtResource("1_c67fa")
@@ -174,6 +180,28 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GhostCheck"]
 position = Vector2(-1, -2)
 shape = SubResource("CircleShape2D_ouydr")
+
+[node name="InkyArea" type="Area2D" parent="."]
+position = Vector2(120, 0)
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InkyArea"]
+shape = SubResource("RectangleShape2D_ouydr")
+
+[node name="ColorRect" type="ColorRect" parent="InkyArea"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="PinkyArea" type="Area2D" parent="."]
+position = Vector2(120, 0)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PinkyArea"]
+shape = SubResource("RectangleShape2D_c67fa")
 
 [connection signal="body_entered" from="TurnPointCheck" to="." method="_on_turn_point_check_body_entered"]
 [connection signal="body_exited" from="TurnPointCheck" to="." method="_on_turn_point_check_body_exited"]

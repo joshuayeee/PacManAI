@@ -1,5 +1,5 @@
 #Author: Joshua Yee
-#Date Last Edited: April 18, 2025
+#Date Last Edited: April 20, 2025
 #Purpose: Defines Inky's AI behavior
 
 #defines the class name
@@ -10,8 +10,6 @@ extends CharacterBody2D
 
 #normal speed
 const SPEED = 200.0
-#anger speed
-const ANGER_SPEED = 300.0
 #run speed
 const RUN_SPEED = 100.0
 
@@ -50,17 +48,10 @@ var target_pos = null
 #var that contains pac-man
 var pac_man = null
 
+var blinky = null
+
 #var that contains the corner object
 var corner = null
-
-#var that contains the dot manager
-var dot_manager = null
-
-#the amount of dots that determines if inky turns angry or not 
-var angry_amount
-
-#helps determine if inky is angry
-var is_angry = false
 
 #helps determine what state inky is in
 var state = "chase"
@@ -71,12 +62,10 @@ func _ready():
 	start_position = position
 	#gets pac-man
 	pac_man = get_parent().get_node("PacMan")
-	#gets the dot manager
-	dot_manager = get_parent().get_node("DotManager")
 	#gets the corner object
 	corner = get_parent().get_node("InkyCorner")
-	#sets up the angry amount
-	angry_amount = dot_manager.get_child_count() / 2
+	
+	blinky = get_parent().get_node("Blinky")
 	
 	#sets the state to chase state
 	set_state("chase")
@@ -114,12 +103,6 @@ func _physics_process(delta):
 				velocity.x = 0
 			#godot's built in function that helps handle movement physics
 			move_and_slide()
-		#check if inky is not angry and that the angry amount has been reached and that the current state is not run
-		if (not is_angry and dot_manager.get_child_count() <= angry_amount and state != "run"):
-			#set inky's speed as anger speed
-			speed = ANGER_SPEED
-			#inky is now angry
-			is_angry = true
 		
 		#check if pac-man is in its super mode
 		#also check if the state does not equal run
@@ -270,12 +253,35 @@ func get_distance(point1, point2):
 	#returns the distance betweem two positions
 	return sqrt(pow(point2.x - point1.x, 2) + pow(point2.y - point1.y, 2))
 
+func get_distance_x(point1x, point2x):
+	return point2x - point1x
+
+func get_distance_y(point1y, point2y):
+	return point2y - point1y
+
 #function that creates the target object
 func create_target(target_name):
 	#check if the target's name is pac-man
 	if (target_name == "pac-man"):
 		#set the target's position to equal to pac-man's current position
-		target_pos = pac_man.position
+		
+		var pinky_area = pac_man.pinky_area
+		
+		var dist_x = get_distance_x(pinky_area.position.x, blinky.position.x)
+		var dist_y = get_distance_y(pinky_area.position.y, blinky.position.y)
+		
+		var add_dist = Vector2(dist_x, dist_y)
+		
+		pac_man.inky_area.position = pinky_area.position
+		pac_man.inky_area.position += add_dist
+		
+		if (pac_man.inky_dot != null):
+			print("dot")
+			target_pos = pac_man.inky_dot.position
+		else:
+			print("pac")
+			target_pos = pac_man.position
+		
 	#check if the target's name is corner
 	elif (target_name == "corner"):
 		#set the target's position to equal corner's position
@@ -301,8 +307,6 @@ func set_state(state_name):
 		create_target("corner")
 		#play the run animation
 		animated_sprite_2d.play("run")
-		#inky is no longer angry
-		is_angry = false
 		#set inky's speed to the run speed
 		speed = RUN_SPEED
 	#set the state depending on state name

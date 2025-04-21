@@ -5,9 +5,14 @@
 #gets all the attributes of Node2D
 extends Node2D
 
+var my_dots = 100
+
+func _ready():
+	my_dots = get_child_count()
+
 func _process(_delta):
 	#check if child count is equal to or below zero
-	if (get_child_count() <= 0):
+	if (my_dots <= 0):
 		#pac-man wins
 		
 		#load win screen

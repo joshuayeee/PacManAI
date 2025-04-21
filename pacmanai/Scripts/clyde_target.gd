@@ -7,7 +7,7 @@ extends Node2D
 
 #signal that runs when blinky enters the target object
 func _on_area_2d_body_entered(body):
-	#check if the body is blinky
+	#check if the body is clyde
 	if (body is Clyde):
 		#check if the state is chase
 		if (body.state == "chase"):
