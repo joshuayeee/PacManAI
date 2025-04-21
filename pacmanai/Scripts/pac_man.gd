@@ -137,7 +137,6 @@ func _physics_process(_delta):
 	if (is_super and super_timer.is_stopped()):
 		#start the super timer
 		super_timer.start()
-		print("super")
 	
 	#check if pac-man can move
 	if (can_move):
@@ -280,7 +279,6 @@ func _on_turn_point_check_body_exited(_body):
 #signal that runs when the super timer runs out of time
 func _on_super_timer_timeout():
 	is_super = false
-	print("not super")
 
 func _on_ghost_check_body_entered(body):
 	if (is_super):

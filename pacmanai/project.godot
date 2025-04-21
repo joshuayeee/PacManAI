@@ -14,7 +14,7 @@ config/name="PacManAI"
 config/version="1.0"
 run/main_scene="uid://cbyfv0lcuotch"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://eywgshn2b4yi"
 
 [display]
 

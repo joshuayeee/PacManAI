@@ -115,7 +115,7 @@ func _physics_process(delta):
 			#godot's built in function that helps handle movement physics
 			move_and_slide()
 		#check if blinky is not angry and that the angry amount has been reached and that the current state is not run
-		if (not is_angry and dot_manager.get_child_count() <= angry_amount and state != "run"):
+		if (not is_angry and dot_manager.my_dots <= angry_amount and state != "run"):
 			#set blinky's speed as anger speed
 			speed = ANGER_SPEED
 			#blinky is now angry

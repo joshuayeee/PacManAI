@@ -276,10 +276,8 @@ func create_target(target_name):
 		pac_man.inky_area.position += add_dist
 		
 		if (pac_man.inky_dot != null):
-			print("dot")
 			target_pos = pac_man.inky_dot.position
 		else:
-			print("pac")
 			target_pos = pac_man.position
 		
 	#check if the target's name is corner

@@ -1,1 +1,16 @@
+res://Scenes/clyde.tscn
+res://Scenes/blinky.tscn
+res://Scripts/blinky.gd
+res://Scenes/main.tscn
 res://Scenes/main_level.tscn
+res://Scenes/pac_man.tscn
+res://Scenes/inky.tscn
+res://Scenes/pinky.tscn
+res://Scenes/pac_dot.tscn
+res://Scenes/super_pac_dot.tscn
+res://Scenes/pinky_target.tscn
+res://Scenes/inky_target.tscn
+res://Scenes/blinky_target.tscn
+res://Scenes/clyde_target.tscn
+res://Scripts/inky.gd
+res://Scripts/pac_man.gd
