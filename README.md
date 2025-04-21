@@ -34,5 +34,12 @@ IF YOU WANT TO LOOK AT THE SCRIPTS:
   GO TO THE DESTINATION "PacManAI > pacmanai > Scripts"
   only open the .gd files
 
-
+DIFFERENCES BETWEEN THE CURRENT PROJECT AND THE PRESENTATION:
+  all the code for Clyde, Inky, and Pinky have been redone
+  Joshua Yee has written the new Inky, Pinky and Clyde code
+  Phat has written the new and old Clyde code
+  Liti Foloifo has written the old Inky code
+  Madison Ung has written the old Pinky code
+  
+  
   
