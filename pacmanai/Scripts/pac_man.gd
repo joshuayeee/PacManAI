@@ -1,5 +1,5 @@
 #Author: Joshua Yee
-#Date Last Edited: April 16, 2025
+#Date Last Edited: April 20, 2025
 #Purpose: Defines Pac-Man's controls
 
 #gets methods and vars from CharacterBody2D
@@ -12,6 +12,10 @@ const FLIP_POINT = 592
 
 #reference to the animated sprite that represents pac-man graphically
 @onready var animated_sprite_2d = $AnimatedSprite2D
+
+@onready var pinky_area = $PinkyArea
+@onready var inky_area = $InkyArea
+
 
 #determines if pac-man can go right
 var right_way = false
@@ -36,6 +40,9 @@ var curr_point = null
 
 #check if pac-man is in its super mode
 var is_super = false
+
+var pinky_dot = null
+var inky_dot = null
 
 #the timer that determines how long super mode lasts for
 @onready var super_timer = $SuperTimer
@@ -138,24 +145,42 @@ func _physics_process(_delta):
 		if (curr_dir == "right"):
 			#set pac-man's x velocity to SPEED
 			velocity.x = SPEED
+			
+			pinky_area.position.x = 120
+			pinky_area.position.y = 0
+			
 			#set pac-man's y velocity to 0
 			velocity.y = 0
 		#check if pac-man's current direction is left
 		elif (curr_dir == "left"):
 			#set pac-man's x velocity to -SPEED
 			velocity.x = -SPEED
+			
+			
+			pinky_area.position.x = -120
+			pinky_area.position.y = 0
+			
 			#set pac-man's y velocity to 0
 			velocity.y = 0
 		#check if pac-man's current direction is up
 		elif (curr_dir == "up"):
 			#set pac-man's y velocity to -SPEED
 			velocity.y = -SPEED
+			
+			
+			pinky_area.position.y = -120
+			pinky_area.position.x = 0
+			
 			#set pac-man's x velocity to 0
 			velocity.x = 0
 		#check if pac-man's current direction is down
 		elif (curr_dir == "down"):
 			#set pac-man's y velocity to SPEED
 			velocity.y = SPEED
+			
+			pinky_area.position.y = 120
+			pinky_area.position.x = 0
+			
 			#set pac-man's x velocity to 0
 			velocity.x = 0
 		

@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://bsvj83pkn8ooc"]
 
 [ext_resource type="Texture2D" uid="uid://ctvwkajsqa367" path="res://Assets/Sprites/PacManChars.png" id="1_6fyh3"]
-[ext_resource type="Script" uid="uid://bbx3o68t33l6u" path="res://Scripts/clyde.gd" id="1_fv8ig"]
+[ext_resource type="Script" uid="uid://lnkx2ysd7uhr" path="res://Scripts/new_clyde.gd" id="1_fv8ig"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_arvl7"]
 atlas = ExtResource("1_6fyh3")
@@ -122,7 +122,7 @@ radius = 21.0
 radius = 2.0
 
 [node name="Clyde" type="CharacterBody2D"]
-collision_layer = 2
+collision_layer = 1026
 collision_mask = 0
 script = ExtResource("1_fv8ig")
 
