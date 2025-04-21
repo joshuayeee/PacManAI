@@ -9,7 +9,14 @@ IF YOU ARE ON WINDOWS:
 IF YOU ARE ON MAC:
   Go to the destination "Mac > PacManAI.dmg"
   open PacManAI.dmg and double click on "PacManAi"
-
+IF YOU WANT TO RUN IT WITH GODOT:
+  Go to https://godotengine.org and click "Download Latest"
+  Run "Godot" 
+  Click "Import" button at the top left
+  Go to the destination "PacManAI > pacmanai > project.godot"
+  Click the import button (make sure the "edit" checkbox is checked)
+  Click the play button (the sideways triangle at the top right)
+  
 CONTROLS:
   W: moves pac-man up
   A: moves pac-man left
